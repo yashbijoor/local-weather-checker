@@ -18,5 +18,5 @@ node app.js
 ```
 
 ## Heroku
-This application is up and running on Heroku.  
+This application is deployed with Heroku.  
 [https://stark-beyond-89290.herokuapp.com/]()
