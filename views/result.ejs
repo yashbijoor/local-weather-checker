@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif&display=swap" rel="stylesheet">
+    <link class="favicon" rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+  </head>
+  <body>
+    <section id="header-section">
+      <h1 class="header">Your weather info</h1>
+    </section>
+    <div class="circle-1" aria-hidden="true"></div>
+    <div class="circle-2" aria-hidden="true"></div>
+    <div class="circle-3" aria-hidden="true"></div>
+    <section id="main-section">
+      <h3 class="city-name"><%=city%></h3>
+      <div class="container">
+        <div class="atm-wrapper">
+          <div class="atm-description">
+            <h2><%=atm%></h2>
+          </div>
+          <div class="atm-icon">
+            <div class="icon-wrapper">
+              <img class="icon-image" src="images/<%=icon%>.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="temp-wrapper">
+          <div class="temp-1">
+            <h3>Present Temperature:</h3>
+            <h3><%=temp%> <%=unit%></h3>
+          </div>
+          <div class="temp-2">
+            <h3>Maximum Temperature:</h3>
+            <h3><%=tempMax%> <%=unit%></h3>
+          </div>
+          <div class="temp-3">
+            <h3>Minimum Temperature:</h3>
+            <h3><%=tempMin%> <%=unit%></h3>
+          </div>
+        </div>
+        <div class="extras-wrapper">
+          <div class="extras-1">
+            <h3>Pressure:</h3>
+            <h3><%=pressure%> mbars</h3>
+          </div>
+          <div class="extras-2">
+            <h3>Humidity:</h3>
+            <h3><%=humidity%>%</h3>
+          </div>
+          <div class="extras-3">
+            <form class="form" action="/" method="redirect">
+              <button class="btn" type="submit" name="button" aria-label="Return to home">Return to home</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

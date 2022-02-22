@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link class="favicon" rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="header-section">
+      <h1 class="header">Check your local weather</h1>
+    </section>
+    <section id="body-section">
+      <div class="circle-1" aria-hidden="true"></div>
+      <div class="circle-2" aria-hidden="true"></div>
+      <div class="circle-3" aria-hidden="true"></div>
+      <form class="form-div" action="/" method="post">
+        <div class="input-wrapper column">
+          <input class="bar" type="text" name="city" value="" placeholder="Name of your city">
+        </div>
+        <div class="column dropdown">
+          <select name="unit">
+            <option value="metric">Celsius</option>
+            <option value="imperial">Fahrenheit</option>
+          </select>
+        </div>
+        <div class="column button-wrapper">
+          <button class="btn button is-light is-info is-medium" type="submit" name="button" aria-label="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+
+
+    <script src="index.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
