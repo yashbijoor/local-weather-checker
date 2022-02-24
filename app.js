@@ -2,7 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
-const ejs = require("ejs")
+const ejs = require("ejs");
+require('dotenv').config();
 
 const app = express();
 
@@ -24,7 +25,7 @@ app.post("/",function(req,res){
 
   var baseURL_1 = "http://api.openweathermap.org/data/2.5/weather?q="
   var baseURL_2 = "&units="
-  var baseURL_3 = "&appid=9d20255677ea1b799d8ea618e2d13279"
+  var baseURL_3 = "&appid="+process.env.API_KEY;
   var finalURL = baseURL_1 + city + baseURL_2 + unit + baseURL_3;
 
   const globalUnit = unit;
